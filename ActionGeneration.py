@@ -91,7 +91,7 @@ def generate_action():
         goal_selection_time = torch.argwhere(original_goal_reached[episode, :]) + 1
         goal_selection_time = torch.cat([torch.zeros(1, 1, dtype=torch.int32), goal_selection_time])
 
-        back_up_indices = torch.randperm(goal_selection_time.shape[0])[:math.ceil(goal_selection_time.shape[0]*.1)]
+        back_up_indices = torch.randperm(goal_selection_time.shape[0])[:math.ceil(goal_selection_time.shape[0])]
         rand_indices = torch.cat([torch.randperm(goal_selection_time.shape[0]), back_up_indices])
 
         environment_objects = torch.argwhere(original_environments[episode, 0, 1:, :, :])
