@@ -179,11 +179,11 @@ def generate_action():
             print(episode)
 
     # Saving to memory
-    if not os.path.exists('./Data_{0}'.format(params.AGENT_TYPE)):
-        os.mkdir('./Data_{0}'.format(params.AGENT_TYPE))
+    if not os.path.exists('./Data_{0}'.format(params.REFERENCE_AGENT_TYPE)):
+        os.mkdir('./Data_{0}'.format(params.REFERENCE_AGENT_TYPE))
 
-    torch.save(environments, './Data_{0}/environments.pt'.format(params.AGENT_TYPE))
-    torch.save(needs, './Data_{0}/needs.pt'.format(params.AGENT_TYPE))
-    torch.save(selected_goals, './Data_{0}/selected_goals.pt'.format(params.AGENT_TYPE))
-    torch.save(goal_reached, './Data_{0}/goal_reached.pt'.format(params.AGENT_TYPE))
-    torch.save(actions, './Data_{0}/actions.pt'.format(params.AGENT_TYPE))
+    torch.save(environments, './Data_{0}/environments.pt'.format(params.REFERENCE_AGENT_TYPE))
+    torch.save(needs, './Data_{0}/needs.pt'.format(params.REFERENCE_AGENT_TYPE))
+    torch.save(selected_goals, './Data_{0}/selected_goals.pt'.format(params.REFERENCE_AGENT_TYPE))
+    torch.save(goal_reached, './Data_{0}/goal_reached.pt'.format(params.REFERENCE_AGENT_TYPE))
+    torch.save(actions, './Data_{0}/actions.pt'.format(params.REFERENCE_AGENT_TYPE))
